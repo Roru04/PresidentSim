@@ -4,9 +4,76 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PresidentSim"
+        xmlns:wpfanimated="http://wpfanimatedgif.codeplex.com"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        WindowStyle="None"
+        WindowState="Maximized">
+
+    <Window.Resources>
+        <Style x:Key="MyButton" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    
+    
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            
+        </Grid.RowDefinitions>
+
+        <Grid.Background>
+            <VisualBrush>
+                <VisualBrush.Visual>
+                    <Image wpfanimated:ImageBehavior.AnimatedSource="img/sparks_start.gif"
+                        wpfanimated:ImageBehavior.RepeatBehavior="1"
+                        wpfanimated:ImageBehavior.AnimateInDesignMode="False"
+                         wpfanimated:ImageBehavior.AutoStart="True"              
+               />
+                </VisualBrush.Visual> 
+            </VisualBrush>
+        </Grid.Background>
+        <Button x:Name="StartButton" Style="{StaticResource MyButton}" Grid.Column="2" Grid.Row="4" 
+                Grid.ColumnSpan="4" Background="Transparent" BorderThickness="2px" 
+                BorderBrush="Black" Content="Start Game" Foreground="White" 
+                FontSize="50px" FontWeight="Bold" Click="StartButton_Click" >
+            
+        </Button>
 
     </Grid>
+
+
+
+    
 </Window>

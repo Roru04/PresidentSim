@@ -6,4 +6,17 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="img\sparks_start.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ImageResizer" Version="4.2.8" />
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\sparks_start.gif" />
+  </ItemGroup>
+
 </Project>
