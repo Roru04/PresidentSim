@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,6 +25,9 @@ namespace PresidentSim
         public MainWindow()
         {
             InitializeComponent();
+            SoundPlayer player = new SoundPlayer("sounds/alexander-nakarada-chase.wav");
+
+            player.Play();
         }
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
