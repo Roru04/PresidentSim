@@ -71,11 +71,19 @@
 
         <Border BorderThickness="0,0,0,3px" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="8" BorderBrush="Black"></Border>
 
-        <Label Grid.Row="0" Grid.Column="6" Content="Money 100000000€" VerticalAlignment="Center" HorizontalAlignment="Center"
+        <Label Grid.Row="0" Grid.Column="6" Content="Money 300000Mio€" VerticalAlignment="Center" HorizontalAlignment="Center"
                FontSize="35px" Grid.ColumnSpan="2"></Label>
 
-        <Button x:Name="Sound" Content="Settings" Margin="40px" Background="Gray" Style="{StaticResource MyButton}"></Button>
+        <Button x:Name="Sound" Content="Sound on/off" Margin="40px" Background="Gray" Style="{StaticResource MyButton}" Click="Sound_Click"></Button>
 
+        
+        
+        
+        <Button Content="Show Map" Margin="40px" Background="DarkGray" Grid.Row="1" Grid.Column="7" Style="{StaticResource MyButton}"></Button>
+
+        <Label Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Mood: 50%" FontSize="30px"></Label>
+        
+        <Button Content="Statistics" Margin="40px" Background="DarkGray" Grid.Row="2" Grid.Column="0" Style="{StaticResource MyButton}"></Button>
         <Button Content="Domestic politics" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="0" Style="{StaticResource MyButton}"></Button>
         <Button Content="Foreign policy" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="1" Style="{StaticResource MyButton}"></Button>
         <Button Content="Living comfort" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="2" Style="{StaticResource MyButton}"></Button>
@@ -83,8 +91,10 @@
         <Button Content="education" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="4" Style="{StaticResource MyButton}"></Button>
         <Button Content="Poice" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="5" Style="{StaticResource MyButton}"></Button>
         <Button Content="Army" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="6" Style="{StaticResource MyButton}"></Button>
-        <Button Content="Show Map" Margin="40px" Background="DarkGray" Grid.Row="8" Grid.Column="7" Style="{StaticResource MyButton}"></Button>
-        
+
+
+        <Image Source="/img/compass.jpg" Grid.Column="7" Grid.Row="8" Margin="10px"></Image>
+
 
 
 

@@ -35,12 +35,13 @@ namespace PresidentSim
        
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
+            player.Stop();
             MainMenu mainMenu = new MainMenu();
 
 
             mainMenu.Show();
 
-            player.Stop();
+           
 
             this.Close();
 
