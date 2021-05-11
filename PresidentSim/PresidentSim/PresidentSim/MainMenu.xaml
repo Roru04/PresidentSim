@@ -5,9 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PresidentSim"
         mc:Ignorable="d"
-        Title="MainMenu" Height="450" Width="800"
-        WindowStyle="None"
+        Title="MainMenu" Height="1080" Width="1920"
+        
         WindowState="Maximized">
+
+    <Window.Resources>
+        <Style x:Key="MyButton" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -17,8 +39,12 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -26,5 +52,44 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
+
+
+       
+
+        <Grid.Background>
+            <ImageBrush ImageSource="\img\europa.jpg"></ImageBrush>
+               
+        </Grid.Background>
+
+        <Rectangle Fill="DarkOliveGreen" Grid.ColumnSpan="8"></Rectangle>
+        <Label Grid.Row="0" Grid.Column="3" Content="Germany 1.1.2021"
+               VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50px" 
+               Grid.ColumnSpan="2">
+            
+        </Label>
+
+
+        <Border BorderThickness="0,0,0,3px" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="8" BorderBrush="Black"></Border>
+
+        <Label Grid.Row="0" Grid.Column="6" Content="Money 100000000€" VerticalAlignment="Center" HorizontalAlignment="Center"
+               FontSize="35px" Grid.ColumnSpan="2"></Label>
+
+        <Button x:Name="Sound" Content="Settings" Margin="40px" Background="Gray" Style="{StaticResource MyButton}"></Button>
+
+        <Button Content="Domestic politics" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="0" Style="{StaticResource MyButton}"></Button>
+        <Button Content="Foreign policy" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="1" Style="{StaticResource MyButton}"></Button>
+        <Button Content="Living comfort" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="2" Style="{StaticResource MyButton}"></Button>
+        <Button Content="health" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="3" Style="{StaticResource MyButton}"></Button>
+        <Button Content="education" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="4" Style="{StaticResource MyButton}"></Button>
+        <Button Content="Poice" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="5" Style="{StaticResource MyButton}"></Button>
+        <Button Content="Army" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="6" Style="{StaticResource MyButton}"></Button>
+        <Button Content="Show Map" Margin="40px" Background="DarkGray" Grid.Row="8" Grid.Column="7" Style="{StaticResource MyButton}"></Button>
+        
+
+
+
+
+
     </Grid>
+    
 </Window>

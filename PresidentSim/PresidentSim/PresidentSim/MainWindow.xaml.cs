@@ -22,22 +22,30 @@ namespace PresidentSim
     /// </summary>
     public partial class MainWindow : Window
     {
+        public SoundPlayer player = new SoundPlayer("sounds/alexander-nakarada-chase.wav");
+
+        
         public MainWindow()
         {
             InitializeComponent();
-            SoundPlayer player = new SoundPlayer("sounds/alexander-nakarada-chase.wav");
+            player.PlayLooping();
 
-            player.Play();
         }
 
+       
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
             MainMenu mainMenu = new MainMenu();
 
+
             mainMenu.Show();
+
+            player.Stop();
 
             this.Close();
 
+            
         }
+        
     }
 }

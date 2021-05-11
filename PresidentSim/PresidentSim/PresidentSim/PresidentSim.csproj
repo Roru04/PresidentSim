@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="img\europa.jpg" />
     <None Remove="img\sparks_start.gif" />
     <None Remove="sounds\alexander-nakarada-chase.wav" />
   </ItemGroup>
@@ -17,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="img\europa.jpg" />
     <Resource Include="img\sparks_start.gif" />
     <Content Include="sounds\alexander-nakarada-chase.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
