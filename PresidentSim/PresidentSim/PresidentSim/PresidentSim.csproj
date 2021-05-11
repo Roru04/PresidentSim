@@ -12,6 +12,7 @@
     <None Remove="img\sparks_start.gif" />
     <None Remove="sounds\alexander-nakarada-chase.wav" />
     <None Remove="sounds\maxkomusic-heroism.wav" />
+    <None Remove="sounds\menuSound.wav" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,7 +27,7 @@
     <Content Include="sounds\alexander-nakarada-chase.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\maxkomusic-heroism.wav">
+    <Content Include="sounds\menuSound.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -87,9 +87,9 @@
         <Button Content="Domestic politics" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="0" Style="{StaticResource MyButton}"></Button>
         <Button Content="Foreign policy" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="1" Style="{StaticResource MyButton}"></Button>
         <Button Content="Living comfort" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="2" Style="{StaticResource MyButton}"></Button>
-        <Button Content="health" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="3" Style="{StaticResource MyButton}"></Button>
-        <Button Content="education" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="4" Style="{StaticResource MyButton}"></Button>
-        <Button Content="Poice" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="5" Style="{StaticResource MyButton}"></Button>
+        <Button Content="Energy and Traffic" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="3" Style="{StaticResource MyButton}"></Button>
+        <Button Content="Health and Education" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="4" Style="{StaticResource MyButton}"></Button>
+        <Button Content="Police" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="5" Style="{StaticResource MyButton}"></Button>
         <Button Content="Army" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="6" Style="{StaticResource MyButton}"></Button>
 
 
