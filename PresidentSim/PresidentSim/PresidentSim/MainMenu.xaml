@@ -93,7 +93,7 @@
         <Button Content="Army" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="6" Style="{StaticResource MyButton}"></Button>
 
 
-        <Image Source="/img/compass.jpg" Grid.Column="7" Grid.Row="8" Margin="10px"></Image>
+        <Button Grid.Column="7" Grid.Row="8" Margin="20px" Content="NextRound" Background="Gray" Style="{StaticResource MyButton}"></Button>
 
 
 

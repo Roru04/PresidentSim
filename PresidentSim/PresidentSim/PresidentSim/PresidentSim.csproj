@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="img\compass.jpg" />
     <None Remove="img\europa.jpg" />
     <None Remove="img\sparks_start.gif" />
     <None Remove="sounds\alexander-nakarada-chase.wav" />
@@ -21,7 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="img\compass.jpg" />
     <Resource Include="img\europa.jpg" />
     <Resource Include="img\sparks_start.gif" />
     <Content Include="sounds\alexander-nakarada-chase.wav">
