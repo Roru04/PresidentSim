@@ -23,13 +23,18 @@ namespace PresidentSim
     public partial class MainWindow : Window
     {
         public SoundPlayer player = new SoundPlayer("sounds/alexander-nakarada-chase.wav");
-       
 
+        public MainClass mainClass = new MainClass();
+
+        
 
         public MainWindow()
         {
             InitializeComponent();
             player.PlayLooping();
+
+            mainClass.JsonData(mainClass);
+           
 
         }
 

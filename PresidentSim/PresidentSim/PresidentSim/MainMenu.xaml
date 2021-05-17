@@ -71,7 +71,7 @@
 
         <Border BorderThickness="0,0,0,3px" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="8" BorderBrush="Black"></Border>
 
-        <Label Grid.Row="0" Grid.Column="6" Content="Money 500Bil€" VerticalAlignment="Center" HorizontalAlignment="Center"
+        <Label x:Name="displayMoney" Grid.Row="0" Grid.Column="6" Content="" VerticalAlignment="Center" HorizontalAlignment="Center"
                FontSize="35px" Grid.ColumnSpan="2"></Label>
 
         <Button x:Name="Sound" Content="Sound on/off" Margin="40px" Background="Gray" Style="{StaticResource MyButton}" Click="Sound_Click"></Button>

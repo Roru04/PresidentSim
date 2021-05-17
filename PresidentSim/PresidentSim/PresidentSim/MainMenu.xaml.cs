@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace PresidentSim
 {
     /// <summary>
@@ -27,6 +28,8 @@ namespace PresidentSim
             
             player.PlayLooping();
             musicIsOn = true;
+
+            
             
 
         }
