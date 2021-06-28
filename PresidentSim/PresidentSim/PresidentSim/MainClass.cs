@@ -18,7 +18,7 @@ namespace PresidentSim
         {
             get
             {
-                return Money.ToString() + "Bil€";
+                return "Money: " +  Money.ToString() + " Bil€";
             }
             
               

@@ -20,6 +20,7 @@ namespace PresidentSim
     /// </summary>
     public partial class MainMenu : Window
     {
+        public MainClass mainclass = new MainClass();
         public SoundPlayer player = new SoundPlayer("sounds/menuSound.wav");
         private bool musicIsOn;
         public MainMenu()
@@ -29,8 +30,9 @@ namespace PresidentSim
             player.PlayLooping();
             musicIsOn = true;
 
-            
-            
+            mainclass.JsonData(mainclass);
+
+            displayMoney.Content = mainclass.DisplayMoney;
 
         }
 
