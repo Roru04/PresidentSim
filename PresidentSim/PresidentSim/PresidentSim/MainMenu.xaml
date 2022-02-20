@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PresidentSim"
         mc:Ignorable="d"
         Title="MainMenu" Height="1080" Width="1920"
-        
+        WindowStyle="None"
         WindowState="Maximized">
 
     <Window.Resources>
