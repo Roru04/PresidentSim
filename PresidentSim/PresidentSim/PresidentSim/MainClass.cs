@@ -13,16 +13,16 @@ namespace PresidentSim
 
         public double Mood { get; set; }
 
-        
-        public string DisplayMoney 
+
+        public string DisplayMoney
         {
             get
             {
-                return "Money: " +  Money.ToString() + " Bil€";
+                return "Money: " + Money.ToString() + " Bil€";
             }
-            
-              
-            
+
+
+
         }
 
 
@@ -30,30 +30,10 @@ namespace PresidentSim
         {
             Mood = 60;
             Money = 500;
-            
+
         }
 
 
-        public MainClass JsonData(MainClass main)
-        {
-            string jsonString = File.ReadAllText(@"..\..\..\Data\MainClassData.json");
 
-
-            if (jsonString == "")
-            {
-               
-                string dataJson = JsonSerializer.Serialize(main);
-
-                File.WriteAllText(@"..\..\..\Data\MainClassData.json", dataJson);
-            }
-            else 
-            {
-                main = JsonSerializer.Deserialize<MainClass>(jsonString);
-
-            }
-            
-          
-            return main;
-        }
     }
 }

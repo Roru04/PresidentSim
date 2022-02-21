@@ -30,7 +30,7 @@ namespace PresidentSim
             player.PlayLooping();
             musicIsOn = true;
 
-            mainclass.JsonData(mainclass);
+            DataHandler.ReadJsonData(mainclass);
 
             displayMoney.Content = mainclass.DisplayMoney;
 

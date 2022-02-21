@@ -9,6 +9,7 @@
   <ItemGroup>
     <None Remove="img\europa.jpg" />
     <None Remove="img\sparks_start.gif" />
+    <None Remove="MainMenu.xaml.cs~RF504939.TMP" />
     <None Remove="sounds\alexander-nakarada-chase.wav" />
     <None Remove="sounds\maxkomusic-heroism.wav" />
     <None Remove="sounds\menuSound.wav" />
