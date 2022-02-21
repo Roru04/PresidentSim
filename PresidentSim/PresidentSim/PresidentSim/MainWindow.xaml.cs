@@ -33,7 +33,7 @@ namespace PresidentSim
             InitializeComponent();
             player.PlayLooping();
 
-            mainClass.JsonData(mainClass);
+            
            
 
         }
