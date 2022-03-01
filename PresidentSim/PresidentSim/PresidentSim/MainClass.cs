@@ -21,18 +21,15 @@ namespace PresidentSim
                 return "Money: " + Money.ToString() + " Bil€";
             }
 
+            set
+            {
 
-
-        }
-
-
-        public MainClass()
-        {
-            Mood = 60;
-            Money = 500;
+            }
 
         }
 
+
+        
 
 
     }

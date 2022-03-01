@@ -30,7 +30,7 @@ namespace PresidentSim
             player.PlayLooping();
             musicIsOn = true;
 
-            DataHandler.ReadJsonData(mainclass);
+            mainclass = DataHandler.ReadJsonData(mainclass);
 
             displayMoney.Content = mainclass.DisplayMoney;
 
@@ -56,6 +56,21 @@ namespace PresidentSim
                 musicIsOn = true;
                 player.Play();
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        { 
+            mainclass.Money = mainclass.Money - 5;
+            DataHandler.WriteJsonData(mainclass);
+
+            MainMenu main = new MainMenu();
+
+            
+
+            main.Show();
+
+            this.Close();
+
         }
     }
 }

@@ -14,23 +14,38 @@ namespace PresidentSim
             try
             {
                 jsonString = File.ReadAllText(@"..\..\..\Data\MainClassData.json");
+
+                main = JsonSerializer.Deserialize<MainClass>(jsonString);
+
             }
             catch (Exception ex)
             {
-                File.Create(@"..\..\..\Data\MainClassData.json");
+                main.Money = 500;
+                main.Mood = 60;
+                string dataJson = JsonSerializer.Serialize(main);
+
+
+            
+
+
+                File.WriteAllText(@"..\..\..\Data\MainClassData.json", dataJson);
+
             }
 
 
-
-
-            main = JsonSerializer.Deserialize<MainClass>(jsonString);
 
 
 
 
             return main;
         }
+
+        public static void WriteJsonData(MainClass main)
+        {
+            string jsonData = JsonSerializer.Serialize(main);
+
+            File.WriteAllText(@"..\..\..\Data\MainClassData.json", jsonData);
+        }
     }
 }
-
 
