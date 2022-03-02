@@ -12,6 +12,6 @@ namespace PresidentSim
         Shortage,
         ResourceDiscovery,
         TradingOffer,
-
+        Tensions
     }
 }

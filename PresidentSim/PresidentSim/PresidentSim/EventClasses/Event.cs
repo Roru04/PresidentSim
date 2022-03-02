@@ -6,7 +6,7 @@ namespace PresidentSim
 {
     public class Event
     {
-        public int Severity { get; set; }
+        public double Severity { get; set; }
 
         public List<Country> AffectedCountries;
 
