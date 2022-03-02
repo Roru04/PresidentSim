@@ -13,17 +13,12 @@ namespace PresidentSim
 
         public double Mood { get; set; }
 
-
+        public List<Event> ActiveEvents;
         public string DisplayMoney
         {
             get
             {
                 return "Money: " + Money.ToString() + " Bil€";
-            }
-
-            set
-            {
-
             }
 
         }
