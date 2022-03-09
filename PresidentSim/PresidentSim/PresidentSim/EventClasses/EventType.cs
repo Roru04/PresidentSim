@@ -7,11 +7,13 @@ namespace PresidentSim
     public enum EventType
     {
         War,
-        NaturalDisaster,
+        Drought,
+        Flood,
         Illnes,
         Shortage,
         ResourceDiscovery,
         TradingOffer,
-        Tensions
+        Tensions,
+        Inflation
     }
 }

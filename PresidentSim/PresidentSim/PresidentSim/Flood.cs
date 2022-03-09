@@ -4,10 +4,8 @@ using System.Text;
 
 namespace PresidentSim
 {
-    public enum RessourceType
+    class Flood
     {
-        Technology,
-        Gold,
-        Uran
+        public int Duration { get; set; }
     }
 }

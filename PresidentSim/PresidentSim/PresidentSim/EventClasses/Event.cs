@@ -8,7 +8,7 @@ namespace PresidentSim
     {
         public double Severity { get; set; }
 
-        public List<Country> AffectedCountries;
+        public List<Country> AffectedCountries { get; set; };
 
         public string Title { get; set; }
 
@@ -16,6 +16,8 @@ namespace PresidentSim
 
 
         public EventType EventType { get; set; }
+
+        public bool IsBad { get; set; }
 
 
         public virtual void ExecuteEvent()

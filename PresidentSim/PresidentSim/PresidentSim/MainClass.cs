@@ -14,6 +14,13 @@ namespace PresidentSim
         public double Mood { get; set; }
 
         public List<Event> ActiveEvents;
+
+        public int Gold { get; set; }
+
+        public int Uran { get; set; }
+
+        public int Technology { get; set; }
+
         public string DisplayMoney
         {
             get
@@ -23,7 +30,10 @@ namespace PresidentSim
 
         }
 
+        public void NextRound()
+        {
 
+        }
         
 
 
