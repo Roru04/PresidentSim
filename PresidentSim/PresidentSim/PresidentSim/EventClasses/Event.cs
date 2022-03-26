@@ -8,7 +8,7 @@ namespace PresidentSim
     {
         public double Severity { get; set; }
 
-        public List<Country> AffectedCountries { get; set; };
+        public List<Country> AffectedCountries { get; set; }
 
         public string Title { get; set; }
 

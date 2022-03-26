@@ -4,11 +4,46 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PresidentSim"
-        WindowState="Maximized"
         mc:Ignorable="d"
-        Title="DomesticPolitics" Height="450" Width="800">
+        Title="MainMenu" Height="1080" Width="1920"
+        WindowStyle="None"
+        WindowState="Maximized">
+
+    <Window.Resources>
+        <Style x:Key="MyButton" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -17,17 +52,54 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
 
 
-        <Label Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Sali</Label>
-        <Slider Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Maximum="10" Minimum="1" IsSnapToTickEnabled="True" ></Slider>
+
+
+        <Grid.Background>
+            <ImageBrush ImageSource="\img\europa.jpg"></ImageBrush>
+
+        </Grid.Background>
+
+        <Rectangle Fill="DarkOliveGreen" Grid.ColumnSpan="8"></Rectangle>
+        <Label Grid.Row="0" Grid.Column="3" Content="Germany 1.1.2021"
+               VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50px" 
+               Grid.ColumnSpan="2">
+
+        </Label>
+
+
+        <Border BorderThickness="0,0,0,3px" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="8" BorderBrush="Black"></Border>
+
+        <Label x:Name="displayMoney" Grid.Row="0" Grid.Column="6" Content="" VerticalAlignment="Center" HorizontalAlignment="Center"
+               FontSize="35px" Grid.ColumnSpan="2"></Label>
+
+        <Button x:Name="Sound" Content="Sound on/off" Margin="40px" Background="Gray" Style="{StaticResource MyButton}" Click="Sound_Click"></Button>
+
+
+
+
+        <Button Content="Show Map" Margin="40px" Background="DarkGray" Grid.Row="1" Grid.Column="7" Style="{StaticResource MyButton}"></Button>
+
+        <Label Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Mood: 50%" FontSize="30px"></Label>
+
+        <Button Content="Statistics" Margin="40px" Background="DarkGray" Grid.Row="2" Grid.Column="0" Style="{StaticResource MyButton}"></Button>
+        <Button x:Name="domesticPolitics" Content="Domestic politics" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="0" Style="{StaticResource MyButton}" Click="DomesticPolitics_Click"></Button>
+        <Button Content="Foreign policy" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="1" Style="{StaticResource MyButton}"></Button>
+        <Button Content="Living comfort" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="2" Style="{StaticResource MyButton}"></Button>
+        <Button Content="Energy and Traffic" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="3" Style="{StaticResource MyButton}"></Button>
+        <Button Content="Health and Education" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="4" Style="{StaticResource MyButton}"></Button>
+        <Button Content="Police" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="5" Style="{StaticResource MyButton}"></Button>
+        <Button Content="Army" Margin="40px" Grid.Row="8" Background="DarkGray" Grid.Column="6" Style="{StaticResource MyButton}"></Button>
+
+
+        <Button Grid.Column="7" Grid.Row="8" Margin="20px" Content="NextRound" Background="Gray" Style="{StaticResource MyButton}" Click="NextRound_Click"></Button>
+
+
+
+
+
+
     </Grid>
+
 </Window>

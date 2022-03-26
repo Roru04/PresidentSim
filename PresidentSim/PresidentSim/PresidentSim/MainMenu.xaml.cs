@@ -58,7 +58,7 @@ namespace PresidentSim
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void NextRound_Click(object sender, RoutedEventArgs e)
         { 
             mainclass.Money = mainclass.Money - 5;
             DataHandler.WriteJsonData(mainclass);
@@ -70,6 +70,20 @@ namespace PresidentSim
             main.Show();
 
             this.Close();
+
+        }
+
+        private void DomesticPolitics_Click(object sender, RoutedEventArgs e)
+        {
+            DomesticPolitics window = new DomesticPolitics();
+
+            window.Show();
+
+            this.Close();
+        }
+
+        private void EnergyAndTraffic_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }
